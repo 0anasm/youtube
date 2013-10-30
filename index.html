@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Bootswatch: Slate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootswatch.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" async="" src="bootstrap/ga.js"></script><script type="text/javascript">
+
+     var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-23019901-1']);
+      _gaq.push(['_setDomainName', "bootswatch.com"]);
+        _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+
+    </script>
+  <script type="text/javascript" async="" src="bootstrap/bsa.js"></script><script type="text/javascript" id="_bsap_js_c466df00a3cd5ee8568b5c4983b6bb19" src="bootstrap/s_c466df00a3cd5ee8568b5c4983b6bb19.js" async="async"></script><style type="text/css" id="bsa_css">.one{position:relative}.one .bsa_it_ad{display:block;padding:15px;border:1px solid #e1e1e1;background:#f9f9f9;font-family:helvetica,arial,sans-serif;line-height:100%;position:relative}.one .bsa_it_ad a{text-decoration:none}.one .bsa_it_ad a:hover{text-decoration:none}.one .bsa_it_ad .bsa_it_t{display:block;font-size:12px;font-weight:bold;color:#212121;line-height:125%;padding:0 0 5px 0}.one .bsa_it_ad .bsa_it_d{display:block;font-size:11px;color:#434343;font-size:12px;line-height:135%}.one .bsa_it_ad .bsa_it_i{float:left;margin:0 15px 10px 0}.one .bsa_it_p{display:block;text-align:right;position:absolute;bottom:10px;right:15px}.one .bsa_it_p a{font-size:10px;color:#666;text-decoration:none}.one .bsa_it_ad .bsa_it_p a:hover{font-style:italic}</style></head>
+  <body style="">
+    <script src="bootstrap/bsa(1).js"></script>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="http://bootswatch.com/" class="navbar-brand"><strong>أنس الخطير</strong></a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index.html">الأولى</a>
+            </li>
+            <li>
+              <a href="http://www.anasm.sa/">موقعي</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row" id="firstrow">
+          <div class="col-lg-4">
+            <div class="bs-example">
+              <div id="videos-list" class="list-group">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+     
+            <p>By <a href="http://anasm.sa/">anasm.sa</a></p>
+
+          </div>
+        </div>
+        
+      </footer>
+    
+
+    </div>
+
+
+    <script src="bootstrap/jquery.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <script src="bootstrap/bootswatch.js"></script>
+     <script>
+     	$(document).ready(function(){
+			$.ajax({
+				type: "GET",
+				url: "http://gdata.youtube.com/feeds/api/users/Anasalmoh/uploads",
+				dataType: "xml",
+				success: function(xml) {
+					$(xml).find('entry').each(function(){
+						var id = $(this).attr('id');
+						var title = $(this).find('title').text();
+						var content = $(this).find('content').text();
+						var url = $(this).find('link').attr('href');
+						$('<a href="' + url +'" class="list-group-item">' + title +'</div>').appendTo('#videos-list');
+					});
+				}
+			});
+		});
+     </script>
+</body></html>
